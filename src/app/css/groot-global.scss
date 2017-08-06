@@ -1,6 +1,5 @@
 ﻿
 @import "groot-variables.scss";
-@import "groot-mixins.scss";
 
 
 html {
@@ -31,9 +30,6 @@ body {
 }
 
 
-.main-container {
-    padding-top: 5rem;
-}
 
 a, a:hover {
     color: $gray !important;
@@ -66,37 +62,44 @@ input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, 
 
 
 
-.odd-cell {
-    background-color: $orange-10 !important;
-}
-.events-found-cell {
-    background-color: $green-10 !important;
-}
-
-.groot-calendar-container {
-  padding-top: .5rem;
-  max-height: 50rem;
-  overflow-y: scroll;
-}
-.groot-badge {
-    display: block;
-    color: $black;
-}
-.cal-week-badge {
-    background-color: $yellow-60;
-    display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1;
-    color: $black;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    border-radius: 10px;
-
-}
-
 
 @import "./groot-common.scss";
+
+
+.todolist > li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: lightgrey;
+    margin: .5em;
+    padding: 5px;
+    border-radius: 4px;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.todolist {
+    list-style-type: none;
+    width: 15em;
+    padding: 0;
+}
+
+li>button {
+    float: right;
+}
+
+.todocard {
+    height: 400px;
+    width: 400px;
+}
+
+.striketext {
+    text-decoration: line-through;
+}
+

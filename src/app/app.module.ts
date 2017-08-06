@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-
+import { MaterialModule } from '@angular/material';
 
 
 import { AppComponent }  from './app.component';
@@ -20,6 +20,7 @@ import { DashboardContainer } from './containers/dashboard/dashboard.container';
   imports:      [
     BrowserModule,
     BrowserAnimationsModule,
+    MaterialModule,
     CommonModule,
     FormsModule,
     HttpModule,
