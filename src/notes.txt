@@ -1,0 +1,20 @@
+
+Mon Aug 7, 2017
+------------------
+TodoGroup
+    - id
+    - title
+    - future type, properties
+    - list of todo entries
+
+TodoEntry
+    - id
+    - group
+    - title
+    - description
+    - event start, end
+    - list of todo entry items
+
+TodoEntryItem
+    - id
+    - data

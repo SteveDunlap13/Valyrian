@@ -1,26 +1,41 @@
 ﻿
-<div class="container">
-    <h1>
-        {{title}}
-    </h1>
-    <div>
-        <md-input-container>
-            <input mdInput [(ngModel)]="newTodo" placeholder="What you want todo">
-        </md-input-container>
-        <a *ngIf="newTodo" md-mini-fab color="primary" (click)="onAdd()">
-            <md-icon>check</md-icon>
-        </a>
 
-        <h2>Todo List
-            <md-icon>check</md-icon>
-        </h2>
-        <div class="todolist">
-            <li *ngFor="let todo of todoData">
-                <md-checkbox [(ngModel)]="todo.isDone" color="accent">
-                    <div [ngClass]="{'striketext': todo.isDone}">{{todo.description}}</div>
-                </md-checkbox>
-            </li>
-        </div>
+<md-tab-group>
+  <md-tab *ngFor="let tg of todoGroups">
+    <ng-template md-tab-label>
+      {{ tg.title }}
+    </ng-template>
+    <h1>tab entry</h1>
+    <p>...</p>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      <md-icon>thumb_down</md-icon> The worst sushi
+    </ng-template>
+    <h1>Terrible sushi restaurants</h1>
+    <p>...</p>
+  </md-tab>
+</md-tab-group>
+
+<!--
+<div>
+    <div *ngFor="let todo of todoEntries">
+        <md-card class="todo-card">
+            <md-card-header>
+                <div md-card-avatar class=""></div>
+                <md-card-title>{{ todo.title }}</md-card-title>
+                <md-card-subtitle>{{ todo.description }}</md-card-subtitle>
+            </md-card-header>
+            <md-card-content>
+                <div *ngFor="let entry of todo.items">
+                    <p>{{ entry.data }}</p>
+                </div>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>Save</button>
+            </md-card-actions>
+        </md-card>
+        <hr/>
     </div>
-    
 </div>
+-->

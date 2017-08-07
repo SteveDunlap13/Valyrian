@@ -66,40 +66,7 @@ input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, 
 @import "./groot-common.scss";
 
 
-.todolist > li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: lightgrey;
-    margin: .5em;
-    padding: 5px;
-    border-radius: 4px;
-    list-style: none;
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.todolist {
-    list-style-type: none;
-    width: 15em;
-    padding: 0;
-}
-
-li>button {
-    float: right;
-}
-
-.todocard {
-    height: 400px;
+.todo-card {
     width: 400px;
 }
-
-.striketext {
-    text-decoration: line-through;
-}
-

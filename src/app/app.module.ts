@@ -15,6 +15,7 @@ import { AppComponent }  from './app.component';
 
 import { DashboardContainer } from './containers/dashboard/dashboard.container';
 
+import { Logger, ApiService, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { DashboardContainer } from './containers/dashboard/dashboard.container';
     CommonModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryApiService),
 
     RouterModule.forRoot([
           { path: '', component: DashboardContainer, },
@@ -38,6 +40,10 @@ import { DashboardContainer } from './containers/dashboard/dashboard.container';
   ],
 
   providers: [
+    Logger,
+    ApiService,
+    TodoGroupService,
+    TodoEntryService,
   ],
 
   bootstrap:    [ AppComponent ]
