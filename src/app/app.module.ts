@@ -7,41 +7,44 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { MaterialModule } from '@angular/material';
-import 'hammerjs';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppRoutes } from './routes'
 
 
 import { AppComponent }  from './app.component';
 
-import { DashboardContainer } from './containers/dashboard/dashboard.container';
+import { HeaderComponent, DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
+import { Error404Component } from './errors/404.component'
 
-import { Logger, ApiService, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
+import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
 
 
 @NgModule({
   imports:      [
     BrowserModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    NgbModule.forRoot(),
     CommonModule,
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryApiService),
 
-    RouterModule.forRoot([
-          { path: '', component: DashboardContainer, },
-          { path: '**', redirectTo: '' }
-      ])
+    RouterModule.forRoot(AppRoutes)
   ],
 
   declarations: [
     AppComponent,
-    DashboardContainer
+    HeaderComponent,
+    DashboardContainer,
+    Error404Component,
+    TodoGroupsComponent,
+    TodoEntriesComponent,
+    TodoEntryComponent
   ],
 
   providers: [
     Logger,
-    ApiService,
     TodoGroupService,
     TodoEntryService,
   ],

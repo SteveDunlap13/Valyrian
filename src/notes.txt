@@ -18,3 +18,7 @@ TodoEntry
 TodoEntryItem
     - id
     - data
+
+
+- use tabs for dashboard navigation, with tab content the todo group description
+- use a child component to display group contents

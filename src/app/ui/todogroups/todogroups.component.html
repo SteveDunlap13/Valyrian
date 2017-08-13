@@ -1,0 +1,16 @@
+
+
+<ngb-tabset (tabChange)="changeGroup($event)">
+    <ngb-tab *ngFor="let tg of todoGroups" [title]="tg.title" [id]="tg.id">
+      <ng-template ngbTabContent>
+        {{tg.description}}
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+
+  <br>
+  <hr>
+  <br>
+  
+  <todoentries [groupId]="selectedGroupId"></todoentries>
+  

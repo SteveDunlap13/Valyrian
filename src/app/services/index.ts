@@ -1,5 +1,4 @@
 
-export * from './api.service';
 export * from './inmemory-api.service';
 export * from './logger.service';
 export * from './todogroup.service';

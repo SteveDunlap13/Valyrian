@@ -1,0 +1,22 @@
+
+@import "groot-variables.scss";
+
+
+.navbar-default {
+    background-color: $white;
+    background-image: none;
+    border: 0;
+    border-bottom: solid 2px $green;
+}
+
+.logo, .logo:hover {
+    padding: .5em 0 0 .5em;
+    margin-left: 10px;
+    font-size: unset;
+}
+.logo .text {
+    font-size: 2em;
+    position: relative;
+    top: 8px;
+}
+

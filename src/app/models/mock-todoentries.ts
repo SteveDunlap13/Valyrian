@@ -1,6 +1,16 @@
 
 import { TodoGroup, TodoEntry, TodoEntryItem } from './index';
 
+
+export let TODOGROUPS: TodoGroup[] = [
+
+    { id: 1, title: 'Group A', description: 'Group A description' },
+    { id: 2, title: 'Group B', description: 'Group B description' },
+    { id: 3, title: 'Group C', description: 'Group C description' }
+
+];
+
+
 export let TODOENTRIES: TodoEntry[] = [
 
     {
@@ -12,7 +22,7 @@ export let TODOENTRIES: TodoEntry[] = [
         isDone: false,
 
         title: 'Sample Title A',
-        description: 'Sample description for Todo A',
+        description: 'Sample description for Todo A in Group A',
 
         items: [
             {
@@ -31,14 +41,14 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 2,
-        group: { id: 2, title: 'Group B', description: 'Group B description' },
+        group: { id: 1, title: 'Group A', description: 'Group A description' },
 
         eventStart: new Date(),
         eventEnd: new Date(),
         isDone: false,
 
         title: 'Sample Title B',
-        description: 'Sample description for Todo B',
+        description: 'Sample description for Todo B in Group A',
 
         items: [
             {
@@ -64,7 +74,7 @@ export let TODOENTRIES: TodoEntry[] = [
         isDone: true,
 
         title: 'Sample Title C',
-        description: 'Sample description for Todo C',
+        description: 'Sample description for Todo C in Group C',
 
         items: [
             {

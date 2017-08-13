@@ -1,5 +1,5 @@
 ﻿
-@import "./groot-variables.scss";
+@import "groot-variables.scss";
 
 
 .gray {
@@ -57,3 +57,4 @@ li.required {
 .ng-invalid:not(form)  {
   border-left: 5px solid $red;
 }
+

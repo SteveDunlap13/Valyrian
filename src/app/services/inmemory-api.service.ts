@@ -1,7 +1,7 @@
 
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-import { TODOENTRIES, TodoGroup, TodoEntry } from '../models/index';
+import { TODOENTRIES, TODOGROUPS, TodoGroup, TodoEntry } from '../models/index';
 
 
 export class InMemoryApiService implements InMemoryDbService {
@@ -10,9 +10,7 @@ export class InMemoryApiService implements InMemoryDbService {
 
     let todoentries = TODOENTRIES;
 
-    let todogroups = TODOENTRIES.map((tde: TodoEntry) => {
-      return tde.group;
-    });
+    let todogroups = TODOGROUPS;
 
     return { todoentries, todogroups };
   }
