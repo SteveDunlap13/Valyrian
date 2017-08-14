@@ -60,3 +60,4 @@ src/app/css/**/*.css
 src/app/css/**/*.min.css
 
 npm-debug.log*
+dist
