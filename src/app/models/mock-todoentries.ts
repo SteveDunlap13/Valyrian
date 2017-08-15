@@ -2,11 +2,22 @@
 import { TodoGroup, TodoEntry, TodoEntryItem } from './index';
 
 
+
+function getRandomDate() {
+
+    let from = new Date(2017, 1, 1, 0, 0, 0);
+    let to = new Date(2017, 12, 31, 0, 0, 0);
+
+    return new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime()));
+}
+
+
+
 export let TODOGROUPS: TodoGroup[] = [
 
-    { id: 1, title: 'Group A', description: 'Group A description' },
-    { id: 2, title: 'Group B', description: 'Group B description' },
-    { id: 3, title: 'Group C', description: 'Group C description' }
+    { id: 1, title: 'Current', description: 'Current items' },
+    { id: 2, title: 'Private', description: '' },
+    { id: 3, title: 'Projects', description: 'Ongoing project notes' }
 
 ];
 
@@ -15,10 +26,11 @@ export let TODOENTRIES: TodoEntry[] = [
 
     {
         id: 1,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[0],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title A1',
@@ -41,10 +53,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 2,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[0],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title B2',
@@ -67,10 +80,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 3,
-        group: { id: 3, title: 'Group C', description: 'Group C description' },
+        group: TODOGROUPS[0],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: true,
 
         title: 'Sample Title C1',
@@ -93,10 +107,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 4,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[1],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title C3',
@@ -119,10 +134,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 5,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[1],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title D4',
@@ -145,10 +161,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 6,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[1],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title E5',
@@ -171,10 +188,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 7,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[2],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title F6',
@@ -197,10 +215,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 8,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[2],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title G8',
@@ -223,10 +242,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 9,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[2],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title H9',
@@ -249,10 +269,11 @@ export let TODOENTRIES: TodoEntry[] = [
     },
     {
         id: 10,
-        group: { id: 1, title: 'Group A', description: 'Group A description' },
+        group: TODOGROUPS[0],
 
         eventStart: new Date(),
         eventEnd: new Date(),
+        lastUpdated: getRandomDate(),
         isDone: false,
 
         title: 'Sample Title M34',

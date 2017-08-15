@@ -1,42 +1,10 @@
 
-<div class="card-columns">
-    <div class="card border-info bg-light">
-        <img class="card-img-top" src="http://via.placeholder.com/200x50" alt="Card image cap">
-        <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-4 p-2" *ngFor="let td of todoEntries">
+        <div class="card card-accent-info bg-light">
+
+            <todoentry [id]="td.id"></todoentry>
+
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-
-    <div class="card border-info bg-light text-center">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h4 class="card-title">Special title treatment</h4>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-
-
-
-
-    <div class="card p-3 border-info bg-light" *ngFor="let td of todoEntries">
-
-        <todoentry [id]="td.id"></todoentry>
-
     </div>
 </div>

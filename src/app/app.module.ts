@@ -17,7 +17,7 @@ import { AppComponent }  from './app.component';
 import { HeaderComponent, DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
 import { Error404Component } from './errors/404.component'
 
-import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService, ImageService } from './services/index';
+import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
 
 
 @NgModule({
@@ -46,8 +46,7 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService, ImageSe
   providers: [
     Logger,
     TodoGroupService,
-    TodoEntryService,
-    ImageService
+    TodoEntryService
   ],
 
   bootstrap:    [ AppComponent ]

@@ -20,5 +20,17 @@ TodoEntryItem
     - data
 
 
-- use tabs for dashboard navigation, with tab content the todo group description
-- use a child component to display group contents
+- groups need an icon
+- make card square /w drop shadow
+- types of todo entries
+    - check list
+    - notes
+
+- draggable ?
+https://github.com/CoderAjay/angular-draggable
+
+
+https://www.google.ca/search?q=angular+draggable+-angularjs&ie=utf-8&oe=utf-8&gws_rd=cr&ei=b0yTWcXkGcLXjwSJ3I-ADw
+
+https://www.genuitec.com/create-kanban-board-angular-4/
+

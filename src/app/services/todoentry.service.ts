@@ -35,11 +35,6 @@ export class TodoEntryService {
     }
 
 
-    private extractData(res: Response) {
-
-        let body = res.json();
-        return body || {};
-    }
 
     private handleError(error: any) {
 
@@ -49,7 +44,7 @@ export class TodoEntryService {
                 ? `${error.status} - ${error.statusText}`
                 : GROOTS.serverError;
 
-        console.error(error);
+        console.error(errMsg);
 
         return Observable.throw(error);
     }

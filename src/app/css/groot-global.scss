@@ -9,6 +9,7 @@ html {
 
 body {
     color: $gray;
+    background-color: $light-gray;
     font-family: Verdana, Gotham, sans-serif;
     font-weight: 400;
     font-size: 100%;
@@ -65,3 +66,7 @@ input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, 
 
 @import "./groot-common.scss";
 
+.card-accent-info {
+    border-top-width: 3px;
+    border-top-color: $blue; 
+}

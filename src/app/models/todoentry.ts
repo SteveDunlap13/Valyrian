@@ -8,6 +8,7 @@ export interface TodoEntry {
 
     eventStart: Date;
     eventEnd: Date;
+    lastUpdated: Date;
     isDone: boolean;
 
     title: string;
