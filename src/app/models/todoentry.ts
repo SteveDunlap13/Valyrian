@@ -12,6 +12,8 @@ export interface TodoEntry {
 
     title: string;
     description: string;
+    imageTitle?: string;
+    imageUrl?: string;
 
     items: TodoEntryItem[];
 }
