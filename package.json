@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sandbox",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 3000",
+    "start": "webpack-dev-server --inline --progress --port 3123",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "xbuild": "tsc -p src/",
@@ -40,6 +40,7 @@
     "angular-in-memory-web-api": "^0.3.2",
     "core-js": "^2.5.0",
     "date-fns": "^1.28.5",
+    "masonry-layout": "^4.2.0",
     "rrule": "^2.2.0",
     "rxjs": "^5.4.3",
     "typings": "^2.1.1",

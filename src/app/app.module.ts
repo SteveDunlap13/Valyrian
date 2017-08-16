@@ -7,12 +7,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutes } from './routes'
 
 
 import { AppComponent }  from './app.component';
+import { MasonryModule } from './masonry/module';
 
 import { HeaderComponent, DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
 import { Error404Component } from './errors/404.component'
@@ -26,11 +27,12 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
   imports:      [
     BrowserModule,
     BrowserAnimationsModule,
-    NgbModule.forRoot(),
+    //NgbModule.forRoot(),
     CommonModule,
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryApiService),
+    MasonryModule,
 
     RouterModule.forRoot(AppRoutes)
   ],

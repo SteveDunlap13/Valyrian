@@ -75,6 +75,14 @@ export let TODOENTRIES: TodoEntry[] = [
             {
                 id: 3,
                 data: 'sample data item 3'
+            },
+            {
+                id: 4,
+                data: 'sample data item 3'
+            },
+            {
+                id: 5,
+                data: 'sample data item 3'
             }
         ]
     },

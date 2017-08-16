@@ -1,6 +1,6 @@
 ﻿
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import "groot-variables.scss";
-
 
 html {
     width: 100%;
@@ -9,16 +9,16 @@ html {
 
 body {
     color: $gray;
-    background-color: $light-gray;
-    font-family: Verdana, Gotham, sans-serif;
+    background-color: $white;
+    font-family: 'Roboto', Verdana, Gotham, sans-serif;
     font-weight: 400;
     font-size: 100%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    -moz-osx-font-smoothing: grayscale;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     -webkit-text-rendering: optimizeLegibility;
     -moz-text-rendering: optimizeLegibility;
     -ms-text-rendering: optimizeLegibility;
@@ -30,9 +30,8 @@ body {
     margin: 0 auto;
 }
 
-
-
-a, a:hover {
+a,
+a:hover {
     color: $gray !important;
     outline: none !important;
     text-decoration: none !important;
@@ -43,7 +42,6 @@ a:hover {
     color: $green !important;
 }
 
-
 textarea:focus,
 input[type="text"]:focus,
 input[type=checkbox]:focus,
@@ -53,20 +51,32 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="date"]:focus,
 input[type="month"]:focus,
-input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus,
-input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
     border-color: $green-60;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $green-60;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $green-60;
     outline: 0 none;
 }
 
-
-
-
 @import "./groot-common.scss";
 
 .card-accent-info {
     border-top-width: 3px;
-    border-top-color: $blue; 
+    border-top-color: $blue;
+}
+
+.brick {
+    max-width: 300px;
+}
+
+.card-footer {
+    font-size: .8em;
 }

@@ -26,11 +26,7 @@ TodoEntryItem
     - check list
     - notes
 
-- draggable ?
-https://github.com/CoderAjay/angular-draggable
+- masonry layout stuff from https://github.com/jelgblad/angular2-masonry
 
-
-https://www.google.ca/search?q=angular+draggable+-angularjs&ie=utf-8&oe=utf-8&gws_rd=cr&ei=b0yTWcXkGcLXjwSJ3I-ADw
-
-https://www.genuitec.com/create-kanban-board-angular-4/
+- 
 
