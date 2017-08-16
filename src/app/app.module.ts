@@ -20,6 +20,8 @@ import { Error404Component } from './errors/404.component'
 import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
 
 
+//import { Sandbox, Notes, NoteCard, NoteCreator, ColourPicker, AppBar } from './temp/index'
+
 @NgModule({
   imports:      [
     BrowserModule,
@@ -40,7 +42,8 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
     Error404Component,
     TodoGroupsComponent,
     TodoEntriesComponent,
-    TodoEntryComponent
+    TodoEntryComponent,
+    //Sandbox, Notes, NoteCard, NoteCreator, ColourPicker, AppBar
   ],
 
   providers: [
