@@ -1,0 +1,13 @@
+
+@mixin stark-card-theme($theme) {
+
+    $primary: map-get($theme, primary);
+    $secondary: map-get($theme, secondary);
+    $warn: map-get($theme, warn);
+    //$background: map-get($theme, background);
+    //$foreground: map-get($theme, foreground);
+
+    .stark-card {
+        border-top: solid 3px mat-color($secondary);
+    }
+}

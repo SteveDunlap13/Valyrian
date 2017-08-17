@@ -1,7 +1,7 @@
 
 <md-card class="stark-card">
     <md-card-header>
-        <md-card-title>{{todoEntry?.title}}</md-card-title>
+        <md-card-title class="stark-card-title">{{todoEntry?.title}}</md-card-title>
         <md-card-subtitle>{{todoEntry?.description}}</md-card-subtitle>
     </md-card-header>
 
@@ -14,7 +14,7 @@
         </ul>
 
     </md-card-content>
-    <md-card-footer class="card-footer">
+    <md-card-footer class="stark-card-footer">
         Last updated: {{todoEntry?.lastUpdated|date:'short'}}
     </md-card-footer>
 </md-card>

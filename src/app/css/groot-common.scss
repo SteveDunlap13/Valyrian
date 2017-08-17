@@ -32,24 +32,6 @@
 
 
 
-.dataTable tbody tr:hover {
-    background-color: $orange-60;
-}
-
-/*
-.required {
-    border-left: 5px solid $green;
-}
-
-
-.required-error, .required-error > button {
-    border-left: 5px solid $red;
-}
-
-li.required {
-    border-left: 5px solid $green;
-}
-*/
 
 .ng-valid[required], .ng-valid.required  {
   border-left: 5px solid $green;

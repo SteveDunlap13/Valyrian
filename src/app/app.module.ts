@@ -18,13 +18,12 @@ import { AppComponent }  from './app.component';
 import { MasonryModule } from './masonry/module';
 import { ValyrianMaterialModule } from './material.module';
 
-import { HeaderComponent, DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
+import { DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
 import { Error404Component } from './errors/404.component'
 
 import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
 
 
-//import { Sandbox, Notes, NoteCard, NoteCreator, ColourPicker, AppBar } from './temp/index'
 
 @NgModule({
   imports:      [
@@ -43,13 +42,11 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
 
   declarations: [
     AppComponent,
-    HeaderComponent,
     DashboardContainer,
     Error404Component,
     TodoGroupsComponent,
     TodoEntriesComponent,
-    TodoEntryComponent,
-    //Sandbox, Notes, NoteCard, NoteCreator, ColourPicker, AppBar
+    TodoEntryComponent
   ],
 
   providers: [
