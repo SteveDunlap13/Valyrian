@@ -1,23 +1,6 @@
 
 <masonry>
-    <masonry-brick class="brick p-2 center" *ngFor="let td of todoEntries">
-        <div class="card card-accent-info bg-light">
-
-            <todoentry [id]="td.id"></todoentry>
-
-        </div>
+    <masonry-brick class="brick" *ngFor="let td of todoEntries">
+        <todoentry [id]="td.id"></todoentry>
     </masonry-brick>
 </masonry>
-
-<!--    
-<div class="row">
-    <div class="col-12 col-sm-6 col-md-4 p-2" *ngFor="let td of todoEntries">
-        <div class="card card-accent-info bg-light">
-
-            <todoentry [id]="td.id"></todoentry>
-
-        </div>
-    </div>
-</div>
-
--->

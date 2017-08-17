@@ -1,17 +1,20 @@
 
+<md-card class="stark-card">
+    <md-card-header>
+        <md-card-title>{{todoEntry?.title}}</md-card-title>
+        <md-card-subtitle>{{todoEntry?.description}}</md-card-subtitle>
+    </md-card-header>
 
-<div class="card-header">{{todoEntry?.title}}</div>
-<!--<img class="card-img-top" src="http://via.placeholder.com/150x25" alt="Card image cap">    -->
-<div class="card-body">
+    <md-card-content>
 
-    <p class="card-title">{{todoEntry?.description}}</p>
-    
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item" *ngFor="let i of todoEntry?.items">
-            {{i?.data}}
-        </li>
-    </ul>
-</div>
-<div class="card-footer text-muted">
-    Last updated: {{todoEntry?.lastUpdated|date:'short'}}
-</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let i of todoEntry?.items">
+                {{i?.data}}
+            </li>
+        </ul>
+
+    </md-card-content>
+    <md-card-footer class="card-footer">
+        Last updated: {{todoEntry?.lastUpdated|date:'short'}}
+    </md-card-footer>
+</md-card>

@@ -1,14 +1,10 @@
 
-<!--
-<ngb-tabset (tabChange)="changeGroup($event)">
-  <ngb-tab *ngFor="let tg of todoGroups" [title]="tg.title" [id]="tg.id">
-    <ng-template ngbTabContent>
-      {{tg.description}}
-    </ng-template>
-  </ngb-tab>
-</ngb-tabset>
+<md-tab-group (selectChange)="onSelect($event)">
+  <md-tab *ngFor="let tg of todoGroups" [label]="tg.title">
+    <p>{{tg.description}}</p>
+  </md-tab>
+</md-tab-group>
 
 <hr>
--->
 
 <todoentries [groupId]="selectedGroupId"></todoentries>

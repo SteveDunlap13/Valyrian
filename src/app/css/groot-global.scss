@@ -1,11 +1,13 @@
 ﻿
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+//@import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
+    
 @import "groot-variables.scss";
+
 
 html {
     width: 100%;
     height: 100%;
-}
+} 
 
 body {
     color: $gray;
@@ -68,10 +70,6 @@ input[type="color"]:focus,
 
 @import "./groot-common.scss";
 
-.card-accent-info {
-    border-top-width: 3px;
-    border-top-color: $blue;
-}
 
 .brick {
     max-width: 300px;

@@ -11,9 +11,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutes } from './routes'
 
+import 'hammerjs';
+
 
 import { AppComponent }  from './app.component';
 import { MasonryModule } from './masonry/module';
+import { ValyrianMaterialModule } from './material.module';
 
 import { HeaderComponent, DashboardContainer, TodoGroupsComponent, TodoEntriesComponent, TodoEntryComponent } from './ui/index';
 import { Error404Component } from './errors/404.component'
@@ -27,6 +30,7 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
   imports:      [
     BrowserModule,
     BrowserAnimationsModule,
+    ValyrianMaterialModule,
     //NgbModule.forRoot(),
     CommonModule,
     FormsModule,

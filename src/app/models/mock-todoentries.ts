@@ -122,7 +122,7 @@ export let TODOENTRIES: TodoEntry[] = [
         lastUpdated: getRandomDate(),
         isDone: false,
 
-        title: 'Sample Title C3',
+        title: 'Sample Title C3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         description: 'Sample description for Todo B in Group A',
 
         items: [

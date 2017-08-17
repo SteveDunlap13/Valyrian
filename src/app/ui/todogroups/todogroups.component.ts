@@ -13,7 +13,8 @@ import { TodoGroup } from '../../models/index';
 export class TodoGroupsComponent implements OnInit {
 
     private todoGroups: TodoGroup[] = [];
-    private selectedGroupId;
+    private selectedGroupId = 1;
+    //private selectedIndex: number;
 
 
     constructor(private todoGroupService: TodoGroupService) { }
@@ -21,6 +22,7 @@ export class TodoGroupsComponent implements OnInit {
     ngOnInit() {
 
         this.fetchTodoGroups();
+        //this.selectedIndex = 1;
     }
 
     fetchTodoGroups(): void {
@@ -33,8 +35,8 @@ export class TodoGroupsComponent implements OnInit {
         });
     }
 
-    changeGroup(e) {
+    onSelect($event: any) {
 
-        this.selectedGroupId = e.nextId;
+        this.selectedGroupId = $event.index + 1;
     }
 }
