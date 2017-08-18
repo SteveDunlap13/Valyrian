@@ -1,13 +1,17 @@
 
+@import '~@angular/material/theming';
+
 @mixin stark-card-theme($theme) {
 
-    $primary: map-get($theme, primary);
-    $secondary: map-get($theme, secondary);
-    $warn: map-get($theme, warn);
-    //$background: map-get($theme, background);
-    //$foreground: map-get($theme, foreground);
+    $primary: mat-palette($mat-orange);
+    $accent: mat-palette($mat-light-blue);
+    $warn: mat-palette($mat-red);
+    
 
     .stark-card {
-        border-top: solid 3px mat-color($secondary);
+        border-top: solid 3px mat-color($accent);
+    }
+    .stark-card-footer {
+        border-top: solid 1px mat-color($accent);
     }
 }

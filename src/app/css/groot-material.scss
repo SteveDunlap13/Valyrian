@@ -1,34 +1,25 @@
 
-@import '~@angular/material/_theming';
+@import '~@angular/material/theming';
 @include mat-core();
 
 
 $primary: mat-palette($mat-orange);
-$accent:  mat-palette($mat-light-blue);
+$accent: mat-palette($mat-light-blue);
 $warn: mat-palette($mat-red);
 
 $valyrian-theme: mat-light-theme($primary, $accent, $warn);
 
-//@import "groot-stark-card-theme.scss";
-
-//@mixin valyrian-theme($theme) {
-//  @include stark-card-theme(theme);
-//}
-
-@include angular-material-theme($valyrian-theme);
-//@include valyrian-theme($valyrian-theme);
-
-
-
-body {
-  font-family: 'Roboto', Verdana, Gotham, sans-serif;
-
-  // Helps fonts on OSX looks more consistent with other systems
-  // Isn't currently in button styles due to performance concerns
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
 
 @import "groot-valyrian.scss";
+@import "groot-stark-card.scss";
+@import "groot-stark-card-theme.scss";
+
+
+@mixin valyrian-theme($theme) {
+  @include stark-card-theme(theme);
+}
+
+
+@include angular-material-theme($valyrian-theme);
+
+@include valyrian-theme($valyrian-theme);

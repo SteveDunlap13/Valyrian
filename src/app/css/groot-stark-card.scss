@@ -2,10 +2,22 @@
 .stark-card {
     margin: 1em;
 }
+
 .stark-card-title {
     font-weight: 800;    
 }
+
+.stark-card-content {
+    margin-bottom: 1em;
+}
+
 .stark-card-footer {
     font-size: .8em;
-    text-align: center;
+    font-weight: 100;
+    text-align: right;
+}
+
+.stark-card-footer div {
+    padding-right: 1em;
+    opacity: 0.5;
 }

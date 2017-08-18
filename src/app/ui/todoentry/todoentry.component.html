@@ -5,16 +5,22 @@
         <md-card-subtitle>{{todoEntry?.description}}</md-card-subtitle>
     </md-card-header>
 
-    <md-card-content>
+    <md-card-content class="stark-card-content">
 
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let i of todoEntry?.items">
-                {{i?.data}}
-            </li>
-        </ul>
+        <md-list>
+            <md-list-item *ngFor="let i of todoEntry?.items">
+                <p md-line>
+                    <md-checkbox>
+                        {{i?.data}}
+                    </md-checkbox>
+                </p>
+            </md-list-item>
+        </md-list>
 
     </md-card-content>
     <md-card-footer class="stark-card-footer">
-        Last updated: {{todoEntry?.lastUpdated|date:'short'}}
+        <div>
+            Last updated: {{todoEntry?.lastUpdated|date:'medium'}}
+        </div>
     </md-card-footer>
 </md-card>
