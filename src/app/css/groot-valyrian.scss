@@ -1,21 +1,11 @@
 
-//@import "groot-variables.scss";
-//@import "groot-common.scss";
-
+// Global styles on app component /w view encapsulation none
 
 body {
     font-family: 'Roboto', Verdana, Gotham, sans-serif;
   
-    // Helps fonts on OSX looks more consistent with other systems
-    // Isn't currently in button styles due to performance concerns
     * {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
   }
-
-.brick {
-    min-width: 300px;
-}
-
-

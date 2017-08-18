@@ -8,7 +8,8 @@ import { TodoEntry } from '../../models/index';
 
 @Component({
     selector: 'todoentry',
-    templateUrl: 'todoentry.component.html'
+    templateUrl: 'todoentry.component.html',
+    styleUrls: ['todoentry.component.scss']
 })
 export class TodoEntryComponent implements OnInit {
 

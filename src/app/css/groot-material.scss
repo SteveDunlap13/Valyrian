@@ -11,8 +11,7 @@ $valyrian-theme: mat-light-theme($primary, $accent, $warn);
 
 
 @import "groot-valyrian.scss";
-@import "groot-stark-card.scss";
-@import "groot-stark-card-theme.scss";
+@import "../ui/todoentry/todoentry.component.theme.scss";
 
 
 @mixin valyrian-theme($theme) {

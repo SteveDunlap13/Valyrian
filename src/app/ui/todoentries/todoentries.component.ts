@@ -9,7 +9,8 @@ import { TodoEntry, TodoEntryItem } from '../../models/index';
 
 @Component({
     selector: 'todoentries',
-    templateUrl: 'todoentries.component.html'
+    templateUrl: 'todoentries.component.html',
+    styleUrls: ['todoentries.component.scss']
 })
 export class TodoEntriesComponent implements OnInit, OnChanges {
 
