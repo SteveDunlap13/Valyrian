@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { TodoGroupService } from '../../services/index';
 import { TodoGroup } from '../../models/index';
@@ -14,7 +14,7 @@ export class TodoGroupsComponent implements OnInit {
 
     private todoGroups: TodoGroup[] = [];
     private selectedGroupId = 1;
-    //private selectedIndex: number;
+    //@ViewChild('starkTabGroup') starkTabGroup;
 
 
     constructor(private todoGroupService: TodoGroupService) { }
@@ -24,6 +24,8 @@ export class TodoGroupsComponent implements OnInit {
         this.fetchTodoGroups();
         //this.selectedIndex = 1;
     }
+
+
 
     fetchTodoGroups(): void {
 

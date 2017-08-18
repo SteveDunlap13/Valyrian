@@ -1,5 +1,5 @@
 
-<md-tab-group (selectChange)="onSelect($event)">
+<md-tab-group #starkTabGroup (selectChange)="onSelect($event)">
   <md-tab *ngFor="let tg of todoGroups" [label]="tg.title">
     <p>{{tg.description}}</p>
   </md-tab>
