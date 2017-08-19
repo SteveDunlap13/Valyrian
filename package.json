@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Valyrian",
   "scripts": {
-    "start": "webpack-dev-server --color --inline --progress --port 3123",
+    "start": "webpack-dev-server --color --inline --progress --port 3123 --https --cert ./valyrian.crt --key ./valyrian.key",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "xxbuild": "tsc -p src/",
