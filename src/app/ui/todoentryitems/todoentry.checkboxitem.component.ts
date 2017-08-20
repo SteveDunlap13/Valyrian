@@ -1,6 +1,6 @@
 
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { MdCheckboxChange } from '@angular/material'
 
 @Component({
     selector: 'checkbox-item',
@@ -9,12 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TodoEntryCheckboxItemComponent {
 
-    @Input() text: string;
+    @Input() data: string;
     @Input() isChecked: boolean;
 
 
-    onChange(event) {
+    onChange($event: MdCheckboxChange) {
 
-        this.isChecked = event.checked;
+        this.isChecked = $event.checked;
     }
 }

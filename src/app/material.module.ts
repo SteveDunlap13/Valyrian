@@ -1,13 +1,14 @@
 
 import { NgModule } from '@angular/core';
 
-import { MdSlideToggleModule, MdButtonModule, MdCardModule,
+import { MaterialModule, MdSlideToggleModule, MdButtonModule, MdCardModule,
          MdMenuModule, MdToolbarModule, MdTabsModule,
          MdIconModule, MdSidenavModule, MdCheckboxModule } from '@angular/material';
 
 
 @NgModule({
     imports: [
+        MaterialModule,
         MdButtonModule,
         MdCardModule,
         MdMenuModule,
@@ -19,6 +20,7 @@ import { MdSlideToggleModule, MdButtonModule, MdCardModule,
         MdCheckboxModule
     ],
     exports: [
+        MaterialModule,
         MdButtonModule,
         MdCardModule,
         MdMenuModule,

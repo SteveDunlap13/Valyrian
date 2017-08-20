@@ -10,7 +10,7 @@
         <md-list>
             <md-list-item *ngFor="let i of todoEntry?.items; let n = index">
                 <p md-line>
-                    <checkbox-item [isChecked]="i?.isDone" [text]="i?.data"></checkbox-item>
+                    <checkbox-item [isChecked]="i?.isDone" [data]="i?.data"></checkbox-item>
                 </p>
             </md-list-item>
         </md-list>

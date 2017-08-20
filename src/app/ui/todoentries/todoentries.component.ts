@@ -1,9 +1,9 @@
 
-import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
 import { TodoEntryService } from '../../services/index';
-import { TodoEntry, TodoEntryItem } from '../../models/index';
+import { TodoGroup, TodoEntry } from '../../models/index';
 
 
 
@@ -12,31 +12,27 @@ import { TodoEntry, TodoEntryItem } from '../../models/index';
     templateUrl: 'todoentries.component.html',
     styleUrls: ['todoentries.component.scss']
 })
-export class TodoEntriesComponent implements OnInit, OnChanges {
+export class TodoEntriesComponent implements OnChanges {
 
-    @Input() groupId: number;
+    @Input() todoGroup: TodoGroup;
     private todoEntries: TodoEntry[] = [];
     private refresh: Subject<any> = new Subject();
 
 
     constructor(private todoEntryService: TodoEntryService) { }
 
-
-    ngOnInit() {
-    }
-
     ngOnChanges(changes: SimpleChanges) {
 
-        this.groupId = changes.groupId.currentValue;
         this.fetchTodoEntries();
     }
 
 
+
     fetchTodoEntries(): void {
 
-        if (this.groupId != null) {
+        if (this.todoGroup != null) {
 
-            this.todoEntryService.getTodoEntries(this.groupId).subscribe(tdes => {
+            this.todoEntryService.getTodoEntries(this.todoGroup.id).subscribe(tdes => {
                 this.todoEntries = tdes.sort(this.sortByLastUpdatedDesc);
                 this.refresh.next();
             });

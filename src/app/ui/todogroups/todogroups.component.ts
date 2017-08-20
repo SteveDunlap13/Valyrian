@@ -1,5 +1,7 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { MdTabChangeEvent } from '@angular/material';
 
 import { TodoGroupService } from '../../services/index';
 import { TodoGroup } from '../../models/index';
@@ -13,9 +15,9 @@ import { TodoGroup } from '../../models/index';
 })
 export class TodoGroupsComponent implements OnInit {
 
-    private todoGroups: TodoGroup[] = [];
-    private selectedGroupId = 1;
-    //@ViewChild('starkTabGroup') starkTabGroup;
+    private todoGroups: TodoGroup[];
+    private selectedTodoGroup: TodoGroup;
+    private group: TodoGroup;
 
 
     constructor(private todoGroupService: TodoGroupService) { }
@@ -23,7 +25,6 @@ export class TodoGroupsComponent implements OnInit {
     ngOnInit() {
 
         this.fetchTodoGroups();
-        //this.selectedIndex = 1;
     }
 
 
@@ -33,13 +34,13 @@ export class TodoGroupsComponent implements OnInit {
         this.todoGroupService.getTodoGroups().subscribe(tgs => {
             this.todoGroups = tgs;
             if (tgs != null) {
-                this.selectedGroupId = tgs[0].id;
+                this.selectedTodoGroup = tgs[0];
             }
         });
     }
 
-    onSelect($event: any) {
+    onSelect($event: MdTabChangeEvent) {
 
-        this.selectedGroupId = $event.index + 1;
+        this.selectedTodoGroup = this.todoGroups[$event.index];
     }
 }

@@ -15,26 +15,26 @@ function getRandomDate() {
 
 export let TODOGROUPS: TodoGroup[] = [
 
-    { id: 1, title: 'Current', icon: 'timeline', description: 'Current items' },
+    { id: 4, title: 'Current', icon: 'timeline', description: 'Current items' },
     { id: 2, title: 'Private', icon: 'lock', description: '' },
-    { id: 3, title: 'Projects', icon: 'apps', description: 'Ongoing project notes' }
+    { id: 66, title: 'Projects', icon: 'apps', description: 'Ongoing project notes' }
 
 ];
 
 export let TODOENTRYITEMS: TodoEntryItem[] = [
 
     {
-        id: 1,
+        id: 12,
         data: 'sample data item 1',
         isDone: false
     },
     {
-        id: 2,
+        id: 20,
         data: 'sample data item 2',
         isDone: true
     },
     {
-        id: 3,
+        id: 30,
         data: 'sample data item 3',
         isDone: false
     }
