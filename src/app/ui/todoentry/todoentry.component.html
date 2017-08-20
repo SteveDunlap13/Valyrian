@@ -8,11 +8,9 @@
     <md-card-content class="stark-card-content">
 
         <md-list>
-            <md-list-item *ngFor="let i of todoEntry?.items">
+            <md-list-item *ngFor="let i of todoEntry?.items; let n = index">
                 <p md-line>
-                    <md-checkbox>
-                        {{i?.data}}
-                    </md-checkbox>
+                    <checkbox-item [isChecked]="i?.isDone" [text]="i?.data"></checkbox-item>
                 </p>
             </md-list-item>
         </md-list>

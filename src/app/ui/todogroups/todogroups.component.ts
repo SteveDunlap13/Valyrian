@@ -8,6 +8,7 @@ import { TodoGroup } from '../../models/index';
 
 @Component({
     selector: 'todogroups',
+    styleUrls: ['todogroups.component.scss'],
     templateUrl: 'todogroups.component.html'
 })
 export class TodoGroupsComponent implements OnInit {

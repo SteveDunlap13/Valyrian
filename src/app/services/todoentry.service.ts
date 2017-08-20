@@ -14,10 +14,14 @@ import { GROOTS } from '../shared/constants';
 export class TodoEntryService {
 
     private apiUrl = GROOTS.TODOENTRYAPI;
-    private headers = new Headers({'Content-Type': 'application/json'});
-    private options = new RequestOptions({ headers: this.headers });
+    private options = new RequestOptions({
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    });
 
-    constructor(private http: Http, private logger: Logger) { }
+    constructor(private http: Http) { }
+
 
 
     getTodoEntry(id: number): Observable<TodoEntry> {

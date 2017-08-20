@@ -1,6 +1,9 @@
 
 <md-tab-group #starkTabGroup (selectChange)="onSelect($event)">
-  <md-tab *ngFor="let tg of todoGroups" [label]="tg.title">
+  <md-tab *ngFor="let tg of todoGroups">
+    <ng-template md-tab-label>
+        <md-icon>{{tg.icon}}</md-icon> {{tg.title}}
+      </ng-template>
     <p>{{tg.description}}</p>
   </md-tab>
 </md-tab-group>

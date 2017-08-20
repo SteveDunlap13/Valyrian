@@ -15,10 +15,29 @@ function getRandomDate() {
 
 export let TODOGROUPS: TodoGroup[] = [
 
-    { id: 1, title: 'Current', description: 'Current items' },
-    { id: 2, title: 'Private', description: '' },
-    { id: 3, title: 'Projects', description: 'Ongoing project notes' }
+    { id: 1, title: 'Current', icon: 'timeline', description: 'Current items' },
+    { id: 2, title: 'Private', icon: 'lock', description: '' },
+    { id: 3, title: 'Projects', icon: 'apps', description: 'Ongoing project notes' }
 
+];
+
+export let TODOENTRYITEMS: TodoEntryItem[] = [
+
+    {
+        id: 1,
+        data: 'sample data item 1',
+        isDone: false
+    },
+    {
+        id: 2,
+        data: 'sample data item 2',
+        isDone: true
+    },
+    {
+        id: 3,
+        data: 'sample data item 3',
+        isDone: false
+    }
 ];
 
 
@@ -36,20 +55,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title A1',
         description: 'Sample description for Todo A in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 2,
@@ -63,28 +69,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title B2',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            },
-            {
-                id: 4,
-                data: 'sample data item 3'
-            },
-            {
-                id: 5,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 3,
@@ -98,20 +83,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title C1',
         description: 'Sample description for Todo C in Group C',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 4,
@@ -125,20 +97,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title C3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 5,
@@ -152,20 +111,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title D4',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 6,
@@ -179,20 +125,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title E5',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 7,
@@ -206,20 +139,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title F6',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 8,
@@ -233,20 +153,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title G8',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 9,
@@ -260,20 +167,7 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title H9',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     },
     {
         id: 10,
@@ -287,19 +181,6 @@ export let TODOENTRIES: TodoEntry[] = [
         title: 'Sample Title M34',
         description: 'Sample description for Todo B in Group A',
 
-        items: [
-            {
-                id: 1,
-                data: 'sample data item 1'
-            },
-            {
-                id: 2,
-                data: 'sample data item 2'
-            },
-            {
-                id: 3,
-                data: 'sample data item 3'
-            }
-        ]
+        items: TODOENTRYITEMS
     }
 ];

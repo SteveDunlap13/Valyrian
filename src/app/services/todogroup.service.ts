@@ -14,10 +14,14 @@ import { GROOTS } from '../shared/constants';
 export class TodoGroupService {
 
     private apiUrl = GROOTS.TODOGROUP;
-    private headers = new Headers({'Content-Type': 'application/json'});
-    private options = new RequestOptions({ headers: this.headers });
 
-    constructor(private http: Http, private logger: Logger) { }
+    private options = new RequestOptions({
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        })
+    });
+
+    constructor(private http: Http) { }
 
 
 
@@ -31,12 +35,6 @@ export class TodoGroupService {
 
 
 
-
-    private extractData(res: Response) {
-
-        let body = res.json();
-        return body || {};
-    }
 
     private handleError(error: any) {
 

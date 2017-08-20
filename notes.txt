@@ -1,26 +1,6 @@
 
-Mon Aug 7, 2017
-------------------
-TodoGroup
-    - id
-    - title
-    - future type, properties
-    - list of todo entries
 
-TodoEntry
-    - id
-    - group
-    - title
-    - description
-    - event start, end
-    - list of todo entry items
-
-TodoEntryItem
-    - id
-    - data
-
-
-- groups need an icon
+x- groups need an icon
 - make card square /w drop shadow
 - types of todo entries
     - check list
@@ -28,5 +8,8 @@ TodoEntryItem
 
 - masonry layout stuff from https://github.com/jelgblad/angular2-masonry
 
-- 
+- look for a good http service template / best practices
+x- check item and strike through
+
+- use reactive forms to save changes
 

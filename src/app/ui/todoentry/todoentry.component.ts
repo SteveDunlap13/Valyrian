@@ -15,6 +15,7 @@ export class TodoEntryComponent implements OnInit {
 
     @Input() id: number;
     public todoEntry: TodoEntry;
+    private activeIndex = -1;
 
     constructor(private todoEntryService: TodoEntryService) { }
 
