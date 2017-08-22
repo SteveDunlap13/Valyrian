@@ -9,3 +9,59 @@ body {
       -moz-osx-font-smoothing: grayscale;
     }
   }
+
+#main {
+    min-height: 700px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+}
+
+#main > article {
+    border: 1px solid #cccc33;
+    background: #dddd88;
+    flex: 3 1 60%;
+    order: 1;
+}
+/*
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 1 6 20%;
+    order: 3;
+}
+*/
+header {
+    display: block;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+    #main, #page {
+        flex-direction: column;
+    }
+
+    #main > article {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    header {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}

@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutes } from './routes'
 
@@ -34,6 +35,7 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
 @NgModule({
   imports:      [
     BrowserModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     ValyrianMaterialModule,
     CommonModule,

@@ -1,8 +1,17 @@
-
 <md-card class="stark-card">
     <md-card-header>
-        <md-card-title class="stark-card-title">
-            <a (click)="openDialog(todoEntry)">{{todoEntry?.title}}</a>
+        <md-card-title class="stark-card-title" fxLayout="row">
+
+            <div fxFlex>
+                {{todoEntry?.title}}
+            </div>
+            
+            <div fxFlexAlign="end">
+                <a (click)="openDialog(todoEntry)">
+                    <md-icon>mode_edit</md-icon>
+                </a>
+            </div>
+
         </md-card-title>
         <md-card-subtitle>{{todoEntry?.description}}</md-card-subtitle>
     </md-card-header>
