@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MaterialModule, MdSlideToggleModule, MdButtonModule, MdCardModule,
          MdMenuModule, MdToolbarModule, MdTabsModule,
+         MdDialogModule,
          MdIconModule, MdSidenavModule, MdCheckboxModule } from '@angular/material';
 
 
@@ -17,7 +18,8 @@ import { MaterialModule, MdSlideToggleModule, MdButtonModule, MdCardModule,
         MdSlideToggleModule,
         MdTabsModule,
         MdSidenavModule,
-        MdCheckboxModule
+        MdCheckboxModule,
+        MdDialogModule
     ],
     exports: [
         MaterialModule,
@@ -29,7 +31,8 @@ import { MaterialModule, MdSlideToggleModule, MdButtonModule, MdCardModule,
         MdSlideToggleModule,
         MdTabsModule,
         MdSidenavModule,
-        MdCheckboxModule
+        MdCheckboxModule,
+        MdDialogModule
     ],
 })
 export class ValyrianMaterialModule { }

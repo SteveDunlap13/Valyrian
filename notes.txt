@@ -13,3 +13,11 @@ x- check item and strike through
 
 - use reactive forms to save changes
 
+- on group change, clean tab entries / clear screen
+    - ui experience is ugly
+
+- click on tab entry header and open modal to view then edit
+    - add pencil icon at top right corner instead of clickig heading
+    
+- add shadows to dashboard cards
+

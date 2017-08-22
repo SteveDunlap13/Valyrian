@@ -1,0 +1,35 @@
+<!-- 
+<h1 md-dialog-title>
+    Dialog</h1>
+<div md-dialog-content>What would you like to do?</div>
+<div md-dialog-actions>
+    <button md-button md-dialog-close="Option 1">Option 1</button>
+    <button md-button md-dialog-close="Option 2">Option 2</button> passed in {{data}}
+</div>
+
+
+    so, data is now a TodoEntry object
+    Display reactive form for edit
+
+-->
+<h1 md-dialog-title>Choose Your Destiny:</h1>
+
+<div md-dialog-content>
+    <form [formGroup]="todoEntryForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <md-input-container class="fullwidth">
+            <input mdInput placeholder="Title" id="title" name="title" formControlName="title">
+        </md-input-container>
+
+        <md-input-container class="fullwidth">
+            <input mdInput placeholder="Description" id="description" name="description" formControlName="description">
+        </md-input-container>
+
+    </form>
+</div>
+
+<div md-dialog-actions>
+    <button md-button color="primary" (click)="submit()" [disabled]="todoEntryForm.pristine">Save</button>
+    <button md-button (click)="revert()" [disabled]="todoEntryForm.pristine">Revert</button>
+</div>
+<!--<p>todoEntryForm value: {{ data | json}}</p>-->

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
@@ -17,8 +17,14 @@ import { AppComponent }  from './app.component';
 import { MasonryModule } from './masonry/module';
 import { ValyrianMaterialModule } from './material.module';
 
-import { HeaderComponent, DashboardContainer, TodoGroupsComponent,
-         TodoEntriesComponent, TodoEntryComponent, TodoEntryCheckboxItemComponent } from './ui/index';
+import { HeaderComponent,
+         DashboardContainer,
+         TodoGroupsComponent,
+         TodoEntriesComponent,
+         TodoEntryComponent,
+         TodoEntryDialog,
+         TodoEntryCheckboxItemComponent } from './ui/index';
+
 import { Error404Component } from './errors/404.component'
 
 import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from './services/index';
@@ -32,6 +38,7 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
     ValyrianMaterialModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryApiService),
     MasonryModule,
@@ -47,6 +54,7 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
     TodoGroupsComponent,
     TodoEntriesComponent,
     TodoEntryComponent,
+    TodoEntryDialog,
     TodoEntryCheckboxItemComponent
   ],
 
@@ -54,6 +62,10 @@ import { Logger, InMemoryApiService, TodoGroupService, TodoEntryService } from '
     Logger,
     TodoGroupService,
     TodoEntryService
+  ],
+
+  entryComponents: [
+    TodoEntryDialog
   ],
 
   bootstrap:    [ AppComponent ]
