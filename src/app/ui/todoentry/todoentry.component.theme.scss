@@ -10,6 +10,7 @@
 
     .stark-card {
         border-top: solid 3px mat-color($accent);
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2) !important;
     }
     .stark-card-footer {
         border-top: solid 1px mat-color($accent);

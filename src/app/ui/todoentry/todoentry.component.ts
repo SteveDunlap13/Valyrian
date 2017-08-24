@@ -15,7 +15,6 @@ import { TodoEntryDialog } from '../index';
 export class TodoEntryComponent {
 
     @Input() todoEntry: TodoEntry;
-    selectedOption: string;
 
     constructor(public dialog: MdDialog) { }
 
@@ -23,16 +22,16 @@ export class TodoEntryComponent {
 
     openDialog(te: TodoEntry) {
 
-        //console.log(JSON.stringify(te));
-
         let dialogRef = this.dialog.open(TodoEntryDialog, {
             data: te,
             height: '300px',
-            width: '400px'
+            width: '400px',
+            //disableClose: true
         });
 
         dialogRef.afterClosed().subscribe(result => {
-            this.selectedOption = result;
+            // console.log(result);
+            // TODO: show toast of returned dialog result
         });
     }
 }

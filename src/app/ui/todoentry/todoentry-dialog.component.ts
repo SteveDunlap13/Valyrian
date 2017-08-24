@@ -4,6 +4,7 @@ import { MdDialog, MdDialogRef } from '@angular/material';
 import { MD_DIALOG_DATA } from '@angular/material';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
+import { TodoEntryService } from '../../services/index';
 import { TodoEntry } from '../../models/index';
 
 
@@ -16,8 +17,9 @@ export class TodoEntryDialog implements OnInit, OnChanges {
     private todoEntryForm: FormGroup;
 
 
-    constructor( @Inject(MD_DIALOG_DATA) public data: TodoEntry,
+    constructor( @Inject(MD_DIALOG_DATA) public todoEntry: TodoEntry,
         private fb: FormBuilder,
+        private todoEntryService: TodoEntryService,
         public dialogRef: MdDialogRef<TodoEntryDialog>) {
 
         this.createForm();
@@ -46,13 +48,32 @@ export class TodoEntryDialog implements OnInit, OnChanges {
     revert() {
 
         this.todoEntryForm.reset({
-            title: this.data.title,
-            description: this.data.description
+            title: this.todoEntry.title,
+            description: this.todoEntry.description
         });
     }
 
     submit() {
 
-        this.dialogRef.close();
+        this.todoEntry = this.prepareSave();
+        this.todoEntryService.saveTodoEntry(this.todoEntry).subscribe(result => {
+            this.dialogRef.close('save');
+        });
+    }
+
+    prepareSave(): TodoEntry {
+
+        let formModel = this.todoEntryForm.value;
+
+        let saveTodoEntry: TodoEntry = this.todoEntry;
+        saveTodoEntry.title = formModel.title as string;
+        saveTodoEntry.description = formModel.description as string;
+
+        //{
+        //    id: this.data.id,
+        //    title: formModel.title as string
+        //};
+
+        return saveTodoEntry;
     }
 }

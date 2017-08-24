@@ -38,6 +38,15 @@ export class TodoEntryService {
                         .catch(this.handleError);
     }
 
+    saveTodoEntry(te): Observable<TodoEntry> {
+
+        return this.http.post(`${this.apiUrl}`, JSON.stringify(te), this.options)
+                        .map((response: Response) => {
+                            return response.json();
+                        })
+                        .catch(this.handleError);
+      }
+
 
 
     private handleError(error: any) {
