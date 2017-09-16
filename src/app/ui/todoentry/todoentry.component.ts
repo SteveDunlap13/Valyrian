@@ -1,6 +1,7 @@
 
 import { Component, Input } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { TodoEntryService } from '../../services/index';
 import { TodoEntry } from '../../models/index';
@@ -12,6 +13,7 @@ import { TodoEntryDialog } from '../index';
     templateUrl: 'todoentry.component.html',
     styleUrls: ['todoentry.component.scss']
 })
+@AutoUnsubscribe()
 export class TodoEntryComponent {
 
     @Input() todoEntry: TodoEntry;

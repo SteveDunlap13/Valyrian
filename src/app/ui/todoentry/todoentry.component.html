@@ -21,9 +21,7 @@
 
         <md-list>
             <md-list-item *ngFor="let i of todoEntry?.items; let n = index">
-                <p md-line>
-                    <checkbox-item [isChecked]="i?.isDone" [data]="i?.data"></checkbox-item>
-                </p>
+                <checkbox-item [isChecked]="i?.isDone" [data]="i?.data"></checkbox-item>
             </md-list-item>
         </md-list>
 

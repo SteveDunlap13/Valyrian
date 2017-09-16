@@ -1,6 +1,7 @@
 
-import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, Input, SimpleChanges, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { TodoEntryService } from '../../services/index';
 import { TodoGroup, TodoEntry } from '../../models/index';
@@ -12,7 +13,8 @@ import { TodoGroup, TodoEntry } from '../../models/index';
     templateUrl: 'todoentries.component.html',
     styleUrls: ['todoentries.component.scss']
 })
-export class TodoEntriesComponent implements OnChanges {
+@AutoUnsubscribe()
+export class TodoEntriesComponent implements OnChanges, OnDestroy {
 
     @Input() todoGroup: TodoGroup;
     private todoEntries: TodoEntry[] = [];
@@ -24,6 +26,9 @@ export class TodoEntriesComponent implements OnChanges {
     ngOnChanges(changes: SimpleChanges) {
 
         this.fetchTodoEntries();
+    }
+
+    ngOnDestroy() {
     }
 
 

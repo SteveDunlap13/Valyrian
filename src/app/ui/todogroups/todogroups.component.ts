@@ -1,7 +1,7 @@
 
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { MdTabChangeEvent } from '@angular/material';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { TodoGroupService } from '../../services/index';
 import { TodoGroup } from '../../models/index';
@@ -13,7 +13,8 @@ import { TodoGroup } from '../../models/index';
     styleUrls: ['todogroups.component.scss'],
     templateUrl: 'todogroups.component.html'
 })
-export class TodoGroupsComponent implements OnInit {
+@AutoUnsubscribe()
+export class TodoGroupsComponent implements OnInit, OnDestroy {
 
     private todoGroups: TodoGroup[];
     private selectedTodoGroup: TodoGroup;
@@ -25,6 +26,8 @@ export class TodoGroupsComponent implements OnInit {
     ngOnInit() {
 
         this.fetchTodoGroups();
+    }
+    ngOnDestroy() {
     }
 
 
@@ -40,6 +43,8 @@ export class TodoGroupsComponent implements OnInit {
     }
 
     onSelect($event: MdTabChangeEvent) {
+
+        // TODO: tell child todo entries to clear its array, new data coming...
 
         this.selectedTodoGroup = this.todoGroups[$event.index];
     }

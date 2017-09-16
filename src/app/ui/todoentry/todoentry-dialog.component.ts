@@ -3,6 +3,7 @@ import { Component, Inject, OnInit, OnChanges } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { MD_DIALOG_DATA } from '@angular/material';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 import { TodoEntryService } from '../../services/index';
 import { TodoEntry } from '../../models/index';
@@ -12,6 +13,7 @@ import { TodoEntry } from '../../models/index';
     selector: 'todoentry-dialog',
     templateUrl: 'todoentry-dialog.component.html',
 })
+@AutoUnsubscribe()
 export class TodoEntryDialog implements OnInit, OnChanges {
 
     private todoEntryForm: FormGroup;
